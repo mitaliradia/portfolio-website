@@ -278,6 +278,18 @@ body.light .code-card {
   height: 140px; /* Fixed height for uniformity */
 }
 
+/* Light mode stat card */
+body.light .stat-card {
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light .stat-card:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
 /* The colored glow line at the top */
 .stat-card::before {
   content: '';
@@ -334,8 +346,9 @@ body.light .code-card {
 .stat-value {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(to right, #fff, var(--card-color)); /* Text Gradient */
+  background: linear-gradient(to right, var(--text-main), var(--card-color)); /* Text Gradient */
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   line-height: 1;
   margin-top: auto; /* Pushes number to bottom */
